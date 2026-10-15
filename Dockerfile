@@ -33,6 +33,9 @@ COPY docker/php.ini /usr/local/etc/php/conf.d/samadhan.ini
 COPY docker/entrypoint.sh /usr/local/bin/samadhan-entrypoint
 
 RUN a2enconf samadhan-app \
+    && if ! getent group 1000 >/dev/null; then groupadd --gid 1000 render-secrets; fi \
+    && secret_group="$(getent group 1000 | cut -d: -f1)" \
+    && usermod -aG "$secret_group" www-data \
     && chmod 0755 /usr/local/bin/samadhan-entrypoint
 
 ENTRYPOINT ["/usr/local/bin/samadhan-entrypoint"]
