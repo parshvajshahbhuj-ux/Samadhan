@@ -4,6 +4,7 @@ ENV PORT=10000
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+        ca-certificates \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libonig-dev \
