@@ -208,7 +208,7 @@ foreach ($allRequests as $requestSummary) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $inquiry ? "Request #" . (int)$inquiry["id"] : ($isAdmin ? "Customer Requests" : "My Support Requests") ?> | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/support-inquiries.css?v=14">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=4">
     <script src="assets/js/page-transitions.js?v=5" defer></script>

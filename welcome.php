@@ -21,7 +21,7 @@ if ($isCustomer && empty($_SESSION["support_inquiry_csrf"])) {
     <title>Welcome | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
     <link rel="stylesheet" href="assets/css/style.css?v=16">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=3">
     <link rel="stylesheet" href="assets/css/welcome.css?v=8">
     <script src="assets/js/page-transitions.js?v=5" defer></script>

@@ -20,7 +20,7 @@ $safeUserName = htmlspecialchars((string)($_SESSION["user_name"] ?? "Administrat
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workspace access | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=17">
     <link rel="stylesheet" href="assets/css/organization-access.css?v=8">
     <script src="assets/js/page-transitions.js?v=5" defer></script>

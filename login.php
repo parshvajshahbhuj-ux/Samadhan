@@ -248,7 +248,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "GET") === "POST") {
 
     <title>Sign in | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <script src="assets/js/page-transitions.js?v=5" defer></script>
     <style>
 

@@ -56,7 +56,7 @@ $priorityClass = isset($ticket)
     <title><?= isset($ticket) ? "Ticket #" . (int)$ticket["id"] . " Activity" : "Ticket Activity" ?> | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
     <link rel="stylesheet" href="assets/css/style.css?v=17">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=13">
     <link rel="stylesheet" href="assets/css/ticket-activity.css?v=2">
     <script src="assets/js/page-transitions.js?v=5" defer></script>

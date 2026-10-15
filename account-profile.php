@@ -46,7 +46,7 @@ $roleLabels = [
     <title>My profile | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
     <link rel="stylesheet" href="assets/css/style.css?v=17">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=21">
     <link rel="stylesheet" href="assets/css/account-profile.css?v=1">
     <script src="assets/js/page-transitions.js?v=5" defer></script>

@@ -64,7 +64,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "GET") === "POST") {
     <title>Account password | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
     <link rel="stylesheet" href="assets/css/style.css?v=17">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=18">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=4">
     <link rel="stylesheet" href="assets/css/account-security.css?v=3">
     <script src="assets/js/page-transitions.js?v=5" defer></script>
