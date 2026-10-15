@@ -1,0 +1,33 @@
+envVarGroups:
+  - name: samadhan-production
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: SMTP_FROM_NAME
+        value: Samadhan
+
+services:
+  - type: web
+    name: samadhan-helpdesk
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /login.php
+    envVars:
+      - fromGroup: samadhan-production
+    disk:
+      name: samadhan-attachments
+      mountPath: /var/www/html/uploads/ticket_attachments
+      sizeGB: 1
+
+  - type: cron
+    name: samadhan-overdue-inquiry-check
+    runtime: docker
+    plan: starter
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerCommand: php process_overdue_support_requests.php
+    schedule: "*/5 * * * *"
+    envVars:
+      - fromGroup: samadhan-production

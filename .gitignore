@@ -1,0 +1,8 @@
+/.env
+/.env.*
+/vendor/
+/composer.phar
+/uploads/ticket_attachments/*
+!/uploads/ticket_attachments/.htaccess
+/database/seed_analytics_customers.php
+/database/seed_analytics_inquiries.php

@@ -1,0 +1,604 @@
+.account-security-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 92% 7%, rgba(20, 153, 191, .07), transparent 32rem),
+        #f3f6fb;
+    color: #172033;
+}
+
+.account-security-container {
+    display: flex;
+    width: min(1440px, calc(100% - 48px));
+    min-width: 0;
+    min-height: calc(100vh - 150px);
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 32px 0 38px;
+}
+
+.account-security-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 25px;
+}
+
+.account-security-heading-copy {
+    max-width: 800px;
+}
+
+.account-security-heading h1 {
+    margin: 5px 0 8px;
+    color: #102c41;
+    font-size: clamp(29px, 3.4vw, 39px);
+    font-weight: 770;
+    letter-spacing: -.045em;
+    line-height: 1.12;
+}
+
+.account-security-heading p {
+    margin: 0;
+    color: #647b8d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.account-security-heading .account-security-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #087fa2;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.account-security-eyebrow span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #20a3a4;
+    box-shadow: 0 0 0 4px rgba(32, 163, 164, .12);
+}
+
+.account-security-back {
+    display: inline-flex;
+    min-height: 42px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 14px;
+    border: 1px solid #d5e4e9;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .9);
+    color: #31576b;
+    font-size: 12px;
+    font-weight: 680;
+    text-decoration: none;
+    transition: border-color .16s ease, background .16s ease, color .16s ease;
+}
+
+.account-security-back:hover {
+    border-color: #8cc7d6;
+    background: #f7fbfc;
+    color: #087da5;
+}
+
+.account-security-back:focus-visible,
+.account-password-submit:focus-visible {
+    outline: 3px solid rgba(8, 127, 177, .25);
+    outline-offset: 3px;
+}
+
+.account-security-back span {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.account-password-message {
+    margin: 0 0 17px;
+    padding: 12px 15px;
+    border: 1px solid #bbded5;
+    border-radius: 10px;
+    background: #effaf6;
+    color: #24765e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.account-password-message.is-error {
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.account-security-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.75fr) minmax(280px, .85fr);
+    align-items: stretch;
+    gap: 18px;
+}
+
+.account-password-card,
+.account-security-guide,
+.account-security-benefit {
+    min-width: 0;
+    border: 1px solid #e1e9ef;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(15, 45, 65, .045);
+}
+
+.account-password-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 2.4vw, 32px);
+}
+
+.account-password-card::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #087fa2, #20a3b6 60%, #54c2bd);
+    content: "";
+}
+
+.account-password-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.account-password-card-title {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 14px;
+}
+
+.account-password-icon {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid #cde6ed;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #edf8fa, #f5fbfb);
+    color: #087fa2;
+    font-size: 16px;
+    font-weight: 780;
+}
+
+.account-password-kicker {
+    color: #168fb4;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .11em;
+}
+
+.account-password-card-heading h2 {
+    margin: 5px 0 0;
+    color: #16384d;
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 740;
+    letter-spacing: -.03em;
+}
+
+.account-password-badge {
+    display: inline-flex;
+    min-height: 30px;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 7px;
+    padding: 0 10px;
+    border: 1px solid #d5ebe3;
+    border-radius: 999px;
+    background: #f1faf6;
+    color: #377966;
+    font-size: 10px;
+    font-weight: 650;
+    white-space: nowrap;
+}
+
+.account-password-badge span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #39a980;
+}
+
+.account-password-account {
+    margin: 19px 0 21px;
+    padding: 11px 13px;
+    border: 1px solid #e7eef2;
+    border-radius: 9px;
+    background: #f8fbfc;
+    color: #748797;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.account-password-account strong {
+    margin-left: 5px;
+    color: #405c70;
+    font-weight: 700;
+}
+
+.account-password-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.account-password-field {
+    min-width: 0;
+}
+
+.account-password-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #385464;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.account-password-field input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 47px;
+    padding: 11px 13px;
+    border: 1px solid #d6e2e8;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: #172f43;
+    font: inherit;
+    font-size: 13px;
+    transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.account-password-field input:focus {
+    border-color: #168fb4;
+    box-shadow: 0 0 0 3px rgba(22, 143, 180, .12);
+}
+
+.account-password-form-footer {
+    display: flex;
+    grid-column: 1 / -1;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 2px;
+    padding-top: 17px;
+    border-top: 1px solid #edf1f5;
+}
+
+.account-password-form-footer p {
+    display: flex;
+    max-width: 540px;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 0;
+    color: #718393;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.account-password-form-footer p span {
+    display: grid;
+    width: 17px;
+    height: 17px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 50%;
+    background: #edf6f8;
+    color: #1384a1;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.account-password-submit {
+    display: inline-flex;
+    min-height: 44px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 17px;
+    border: 1px solid #087da5;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #108eaa, #08749a);
+    box-shadow: 0 6px 15px rgba(8, 127, 165, .16);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 730;
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.account-password-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 9px 19px rgba(8, 127, 165, .23);
+}
+
+.account-password-submit span {
+    font-size: 15px;
+    line-height: 1;
+}
+
+.account-security-guide {
+    position: relative;
+    overflow: hidden;
+    padding: 23px;
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(20, 153, 191, .09), transparent 55%),
+        #fff;
+}
+
+.account-security-guide-icon {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 1px solid #d6e9ef;
+    border-radius: 11px;
+    background: rgba(244, 250, 252, .9);
+    color: #1685a3;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.account-security-guide h2 {
+    max-width: 230px;
+    margin: 9px 0 8px;
+    color: #16384d;
+    font-size: 20px;
+    font-weight: 750;
+    letter-spacing: -.035em;
+}
+
+.account-security-guide-copy {
+    max-width: 300px;
+    margin: 0 0 20px;
+    color: #718393;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.account-security-option {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 0;
+    border-top: 1px solid #edf2f4;
+}
+
+.account-security-option-mark {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid #d5e9ee;
+    border-radius: 10px;
+    background: #eff8fa;
+    color: #0a809c;
+    font-size: 11px;
+    font-weight: 780;
+}
+
+.account-security-option-mark.is-code {
+    border-color: #e0e3f5;
+    background: #f3f4fb;
+    color: #6469aa;
+}
+
+.account-security-option > span:last-child {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+}
+
+.account-security-option strong {
+    color: #365366;
+    font-size: 11px;
+    font-weight: 730;
+}
+
+.account-security-option small {
+    color: #83939e;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.account-security-guide-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 11px;
+    padding: 11px 12px;
+    border: 1px solid #d9ece5;
+    border-radius: 9px;
+    background: #f4faf7;
+    color: #557c70;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.account-security-guide-note span {
+    color: #278c6e;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.account-security-benefits {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.account-security-benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 17px 18px;
+    background: rgba(255, 255, 255, .82);
+}
+
+.account-security-benefit-icon {
+    display: grid;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid #d7e9ed;
+    border-radius: 10px;
+    background: #eff8fa;
+    color: #137e98;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.account-security-benefit-icon.is-blue {
+    border-color: #dce3f5;
+    background: #f2f5fb;
+    color: #6376b2;
+    font-size: 13px;
+}
+
+.account-security-benefit-icon.is-green {
+    border-color: #d4eadf;
+    background: #f0f8f3;
+    color: #308660;
+    font-size: 13px;
+}
+
+.account-security-benefit h2 {
+    margin: 2px 0 5px;
+    color: #385464;
+    font-size: 11px;
+    font-weight: 740;
+}
+
+.account-security-benefit p {
+    margin: 0;
+    color: #7b8d98;
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+    .account-security-layout {
+        grid-template-columns: minmax(0, 1.35fr) minmax(240px, .85fr);
+        gap: 14px;
+    }
+
+    .account-password-badge {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 700px) {
+    .account-security-container {
+        width: calc(100% - 36px);
+        min-height: calc(100vh - 160px);
+        padding-top: 25px;
+    }
+
+    .account-security-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 19px;
+    }
+
+    .account-security-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .account-security-benefits {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .account-security-benefit {
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    .account-security-container {
+        width: calc(100% - 28px);
+        padding-top: 20px;
+    }
+
+    .account-security-heading h1 {
+        font-size: 28px;
+    }
+
+    .account-security-heading p {
+        font-size: 13px;
+    }
+
+    .account-security-back {
+        min-height: 38px;
+    }
+
+    .account-password-card,
+    .account-security-guide {
+        padding: 18px 16px;
+    }
+
+    .account-password-card-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .account-password-badge {
+        min-height: 27px;
+    }
+
+    .account-password-account {
+        margin: 15px 0 18px;
+    }
+
+    .account-password-form {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .account-password-form-footer {
+        grid-column: auto;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .account-password-submit {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .account-security-back,
+    .account-password-field input,
+    .account-password-submit {
+        transition: none;
+    }
+}

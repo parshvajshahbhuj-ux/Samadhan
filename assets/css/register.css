@@ -1,0 +1,222 @@
+.register-shell {
+    grid-template-columns: minmax(275px, .76fr) minmax(0, 1.4fr);
+}
+
+.register-content {
+    padding-top: clamp(30px, 3.6vw, 43px);
+    padding-bottom: 28px;
+}
+
+.register-content .login-heading {
+    margin-bottom: 20px;
+}
+
+.register-content .login-heading h1 {
+    font-size: clamp(25px, 2.5vw, 30px);
+}
+
+.register-content .login-heading p {
+    max-width: 560px;
+}
+
+.register-form-panel {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #e2ebee;
+    border-radius: 15px;
+    background: linear-gradient(155deg, #fff 55%, #f8fbfb);
+}
+
+.register-panel-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.register-step {
+    display: grid;
+    width: 27px;
+    height: 27px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid #d1e9e9;
+    border-radius: 9px;
+    background: #edf8f7;
+    color: #0c8388;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.register-panel-heading h2 {
+    margin: 1px 0 4px;
+    color: #234254;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.register-panel-heading p {
+    margin: 0;
+    color: #82939d;
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+.register-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 15px;
+}
+
+.register-field {
+    min-width: 0;
+    margin-top: 13px;
+}
+
+.register-field-wide {
+    grid-column: 1 / -1;
+}
+
+.register-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: #385464;
+    font-size: 10px;
+    font-weight: 720;
+}
+
+.register-field input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 41px;
+    padding: 9px 11px;
+    border: 1px solid #d5e2e6;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #19394b;
+    font: inherit;
+    font-size: 11px;
+    transition: border-color .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.register-field input::placeholder {
+    color: #9aabb2;
+}
+
+.register-field input:focus {
+    border-color: #39a1a2;
+    background: #fcfefe;
+    box-shadow: 0 0 0 3px rgba(27, 148, 148, .12);
+}
+
+.register-submit {
+    min-height: 44px;
+    margin-top: 17px;
+}
+
+.register-message {
+    margin: 0 0 15px;
+    padding: 11px 13px;
+    border: 1px solid #cce8e4;
+    border-radius: 10px;
+    background: #f0faf7;
+    color: #286f66;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.register-message.error {
+    border-color: #f4caca;
+    background: #fff5f4;
+    color: #a83333;
+}
+
+.register-footer {
+    margin-top: 17px;
+}
+
+.register-pending-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 18px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.register-pending-actions form {
+    margin: 0;
+}
+
+.register-secondary {
+    padding: 7px 3px;
+    border: 0;
+    background: transparent;
+    color: #087f91;
+    cursor: pointer;
+    font: inherit;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.register-secondary:hover {
+    color: #075f70;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.register-secondary:focus-visible {
+    outline: 3px solid rgba(28, 150, 148, .3);
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .register-shell {
+        grid-template-columns: minmax(245px, .72fr) minmax(0, 1.45fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .register-shell {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .register-content {
+        padding: 25px 24px 22px;
+    }
+
+    .register-content .login-heading {
+        margin-bottom: 17px;
+    }
+}
+
+@media (max-width: 520px) {
+    .register-form-panel {
+        padding: 17px 15px;
+    }
+
+    .register-fields {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .register-field-wide {
+        grid-column: auto;
+    }
+
+    .register-field {
+        margin-top: 12px;
+    }
+
+    .register-pending-actions {
+        gap: 3px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .register-field input {
+        transition: none;
+    }
+}
