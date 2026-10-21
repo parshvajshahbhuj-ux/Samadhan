@@ -255,7 +255,7 @@ $safeEmail = htmlspecialchars($emailValue, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register your organization | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=26">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=3">
     <link rel="stylesheet" href="assets/css/login.css?v=3">
     <link rel="stylesheet" href="assets/css/register.css?v=2">

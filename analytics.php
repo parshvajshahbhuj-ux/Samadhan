@@ -14,7 +14,7 @@ $userRole = htmlspecialchars($_SESSION["role"] ?? "user", ENT_QUOTES, "UTF-8");
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
     <link rel="stylesheet" href="assets/css/style.css?v=16">
     <link rel="stylesheet" href="assets/css/analytics.css?v=6">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=26">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=4">
     <script src="assets/js/page-transitions.js?v=5" defer></script>
 </head>

@@ -619,7 +619,7 @@ if (!isSupportStaff()) {
         }
 
     </style>
-    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=26">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=3">
     <script src="assets/js/page-transitions.js?v=5" defer></script>
 
@@ -1175,6 +1175,7 @@ $(document).ready(function () {
 
                             <div class="user-role">
                                 ${escapeHtml({
+                                    owner: "Owner",
                                     admin: "Main Admin",
                                     support: "Support Member",
                                     user: "Customer"

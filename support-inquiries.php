@@ -43,7 +43,7 @@ try {
             LEFT JOIN organization_memberships ticket_assignee_membership
                 ON ticket_assignee_membership.user_id = linked_ticket.assigned_to_user_id
                 AND ticket_assignee_membership.organization_id = inquiry.organization_id
-                AND ticket_assignee_membership.role IN ('admin', 'support')
+                AND ticket_assignee_membership.role IN ('admin', 'support', 'owner')
             LEFT JOIN users ticket_assignee
                 ON ticket_assignee.id = ticket_assignee_membership.user_id
             WHERE inquiry.id = :id
@@ -66,7 +66,7 @@ try {
                 FROM organization_memberships membership
                 INNER JOIN users ON users.id = membership.user_id
                 WHERE membership.organization_id = :organization_id
-                  AND membership.role = 'admin'
+                  AND membership.role IN ('admin', 'owner')
                 ORDER BY membership.created_at ASC, users.id ASC
                 LIMIT 1
             ");
@@ -208,7 +208,7 @@ foreach ($allRequests as $requestSummary) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $inquiry ? "Request #" . (int)$inquiry["id"] : ($isAdmin ? "Customer Requests" : "My Support Requests") ?> | Samadhan</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/samadhan-logo.svg">
-    <link rel="stylesheet" href="assets/css/navigation.css?v=20">
+    <link rel="stylesheet" href="assets/css/navigation.css?v=26">
     <link rel="stylesheet" href="assets/css/support-inquiries.css?v=14">
     <link rel="stylesheet" href="assets/css/samadhan-theme.css?v=4">
     <script src="assets/js/page-transitions.js?v=5" defer></script>
